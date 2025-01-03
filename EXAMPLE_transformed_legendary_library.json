@@ -1,0 +1,17 @@
+{
+  "version": "03",
+  "data": [
+    {
+      "group": "epicmanualimport",
+      "public": false,
+      "games": [
+        {
+          "id": "Driftfish",
+          "title": "Totally Accurate Battle Simulator",
+          "platforms": 0,
+          "playtime": 0
+        }
+      ]
+    }
+  ]
+}

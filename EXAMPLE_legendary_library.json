@@ -1,0 +1,43 @@
+{
+  "library": [
+    {
+      "app_name": "Driftfish",
+      "art_cover": "https://cdn1.epicgames.com/ffe512fa1e594ee6a75d4643d1e21b43/item/EGS_TotallyAccurateBattleSimulator_LandfallGames_S3-2560x1440-5a7fa2ad3029ef94c70ca19f088ee9c3.jpg",
+      "art_square": "https://cdn1.epicgames.com/ffe512fa1e594ee6a75d4643d1e21b43/item/EGS_TotallyAccurateBattleSimulator_LandfallGames_S4-1200x1600-6c3faa0bfc6514db0630522fa628ed84.jpg",
+      "cloud_save_enabled": true,
+      "developer": "Landfall Games",
+      "extra": {
+        "about": {
+          "description": "Totally Accurate Battle Simulator",
+          "shortDescription": ""
+        },
+        "reqs": [],
+        "storeUrl": "https://www.epicgames.com/store/product/totally-accurate-battle-simulator"
+      },
+      "dlcList": [],
+      "folder_name": "TABS",
+      "install": {
+        "executable": "TotallyAccurateBattleSimulator.app/Contents/MacOS/Totally Accurate Battle Simulator",
+        "install_path": "/Games/Heroic/TABS",
+        "install_size": "4.47 GiB",
+        "is_dlc": false,
+        "version": "1.1.8_osx",
+        "platform": "Mac"
+      },
+      "is_installed": true,
+      "namespace": "",
+      "is_mac_native": true,
+      "save_folder": "{AppData}/Landfall Games/Totally Accurate Battle Simulator/Saved/",
+      "save_path": null,
+      "title": "Totally Accurate Battle Simulator",
+      "canRunOffline": true,
+      "isEAManaged": false,
+      "is_linux_native": false,
+      "runner": "legendary",
+      "store_url": "https://www.epicgames.com/store/product/totally-accurate-battle-simulator"
+    }
+  ],
+  "__timestamp": {
+    "library": "Fri Jan 03 2025 10:13:21 GMT+0100 (Central European Standard Time)"
+  }
+}
