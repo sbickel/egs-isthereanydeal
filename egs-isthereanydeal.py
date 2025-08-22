@@ -26,8 +26,6 @@ def transform_library(input_file, output_file):
         ]
     }
 
-    # Pull request with https://github.com/marcodallagatta/egs-isthereanydeal
-
     # 4. Pull list of all game titles from legendary library
     gamedb = []
     for game in games:
