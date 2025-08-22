@@ -1,4 +1,5 @@
 import json
+import requests
 
 def transform_library(input_file, output_file):
     # 1. Load JSON
@@ -25,9 +26,30 @@ def transform_library(input_file, output_file):
         ]
     }
 
-    # 4. Transform each game
+    # Pull request with https://github.com/marcodallagatta/egs-isthereanydeal
+
+    # 4. Pull list of all game titles from legendary library
+    gamedb = []
     for game in games:
-        game_id = game.get('app_name', '')
+        gamedb.append(game.get('app_title'))
+    
+    # 5. Lookup Is There Any Deals ID's for each game
+
+    url = 'https://api.isthereanydeal.com/lookup/id/title/v1'
+
+    response = requests.post(url,json=gamedb)
+    
+    # 6. Transform each game
+    # 6.1 Open ITAD Dict
+    itaddata = response.json()
+
+    # 6.2 Get GameID from ITAD Dict
+    for game in games:
+        for itadid in itaddata:
+            if game.get('app_title') == itadid:
+                game_id = itaddata[itadid]
+
+    # 6.3 Add game data to json structure
         # Prefer the field your file actually uses:
         title = (
             game.get('app_title')
@@ -41,7 +63,7 @@ def transform_library(input_file, output_file):
             "playtime": 0
         })
 
-    # 5. Write out
+    # 7. Write out
     with open(output_file, 'w') as f:
         json.dump(itad_format, f, indent=2)
 
@@ -49,3 +71,4 @@ def transform_library(input_file, output_file):
 if __name__ == '__main__':
     # Use the real output filename you want:
     transform_library('legendary_library.json', 'transformed_legendary_library.json')
+
